@@ -78,6 +78,7 @@ const btnFull = document.querySelector(".btn--full");
 const btnOutline = document.querySelector(".btn--outline");
 const navbtn = document.querySelector(".btn-mobile-nav");
 const mainNav = document.querySelector(".main-nav");
+const menubtn = document.querySelector(".icon-mobile-nav");
 
 navbtn.addEventListener("click", (e) => {
   const el = e.target.getAttribute("name");
@@ -93,6 +94,7 @@ const scrollFunction = (e) => {
   const section = document.getElementById(`${id}`);
   section.scrollIntoView({ behavior: "smooth" });
   mainNav.classList.remove("main-nav-active");
+  menubtn.setAttribute("name", "menu-outline");
 };
 
 navLink.forEach((el) => el.addEventListener("click", scrollFunction));
